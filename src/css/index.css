@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#close-now {
+  @apply hidden;
+}
+
+#close-session:hover #close-now {
+  @apply flex;
+}
