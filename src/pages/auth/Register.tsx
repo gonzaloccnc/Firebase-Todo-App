@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react'
 import { handleCreateEmailAndPassword, handleRedirectGoogle } from '../../firebase/auth/auth'
 import { AuthComponent } from '../../components/auth/AuthComponent'
 import { type UserCredential } from 'firebase/auth'
-import { authContext } from '../../context/AuthContext'
+import { authContext } from '../../context/auth/AuthContext'
 import { useNavigate } from 'react-router-dom'
 
 const Register: React.FC = () => {

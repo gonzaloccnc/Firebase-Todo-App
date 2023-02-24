@@ -1,8 +1,8 @@
 import React, { createContext, useEffect, useReducer, useContext } from 'react'
-import { type DocumentFirebase, type Reducer, type TodoPayload } from '../utils/types'
+import { type DocumentFirebase, type Reducer, type TodoPayload } from '../../utils/types'
 import { todoReducer } from './reducers/TodoReducer'
-import { getDocuments } from '../firebase/firestore/firestore'
-import { authContext } from './AuthContext'
+import { getDocuments } from '../../firebase/firestore/firestore'
+import { authContext } from './../auth/AuthContext'
 
 interface TodoProviderProps {
   children: React.ReactNode

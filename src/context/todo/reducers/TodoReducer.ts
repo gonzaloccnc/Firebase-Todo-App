@@ -1,5 +1,15 @@
-import { addDocument, deleteDocument, updateDocument } from '../../firebase/firestore/firestore'
-import { type TodoPayload, type DocumentFirebase, type Reducer, type TodoUser, type TodoUserDelete } from '../../utils/types'
+import {
+  addDocument,
+  deleteDocument,
+  updateDocument
+} from '../../../firebase/firestore/firestore'
+import {
+  type TodoPayload,
+  type DocumentFirebase,
+  type Reducer,
+  type TodoUser,
+  type TodoUserDelete
+} from '../../../utils/types'
 
 const todoReducer = (state: DocumentFirebase[], action: Reducer<TodoPayload>): DocumentFirebase[] => {
   switch (action.type) {

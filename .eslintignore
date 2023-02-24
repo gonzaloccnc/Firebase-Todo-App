@@ -2,3 +2,4 @@ vite.config.ts
 *.config.js
 *.config.cjs
 dist
+*.d.ts

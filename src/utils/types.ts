@@ -32,7 +32,14 @@ export interface TweetFirebase {
   logo: string
 }
 
+export interface TweetDelete {
+  userid: string
+  tweetid: string
+}
+
 export type TodoPayload = TodoUser | TodoUserDelete | DocumentFirebase[]
+
+export type TweetPayload = TweetFirebase | TweetDelete | TweetFirebase[]
 
 export interface UserDocument {
   edad: number

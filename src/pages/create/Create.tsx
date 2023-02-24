@@ -3,7 +3,7 @@ import { type dinamicObject } from '../../utils/types'
 import { createUser } from '../../firebase/firestore/firestore'
 import { v4 } from 'uuid'
 import { auth } from '../../firebase/firebase.config'
-import { authContext } from '../../context/AuthContext'
+import { authContext } from '../../context/auth/AuthContext'
 import { type User, updateProfile } from 'firebase/auth'
 
 const Create: React.FC = () => {

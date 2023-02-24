@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { TodoContainer } from '../../components/todo/TodoContainer'
-import { todoContext } from '../../context/TodoContext'
+import { todoContext } from '../../context/todo/TodoContext'
 import { TodoForm } from '../../components/todo/TodoForm'
 
 const Todos: React.FC = () => {

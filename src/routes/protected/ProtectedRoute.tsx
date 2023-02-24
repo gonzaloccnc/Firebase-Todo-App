@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 
 import { Navigate } from 'react-router-dom'
-import { authContext } from '../../context/AuthContext'
+import { authContext } from '../../context/auth/AuthContext'
 
 interface HomeProtetedProps {
   children: React.ReactNode
@@ -9,7 +9,7 @@ interface HomeProtetedProps {
 
 const RouteProtected: React.FC<HomeProtetedProps> = ({ children }) => {
   const { login } = useContext(authContext)
-  console.log(login)
+
   if (login === 'idle') {
     return <Navigate to='/auth' />
   }

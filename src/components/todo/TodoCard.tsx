@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react'
 import { AiOutlineDelete, AiOutlineEdit } from 'react-icons/ai'
-import { todoContext } from '../../context/TodoContext'
+import { todoContext } from '../../context/todo/TodoContext'
 import { TodoEdit } from './TodoEdit'
-import { authContext } from '../../context/AuthContext'
+import { authContext } from '../../context/auth/AuthContext'
 
 interface TodoCardProps {
   todo: string

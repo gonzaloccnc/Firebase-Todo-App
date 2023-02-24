@@ -1,7 +1,7 @@
 import { onAuthStateChanged } from 'firebase/auth'
 import React, { createContext, useEffect, useState } from 'react'
-import { auth } from '../firebase/firebase.config'
-import { getUser } from '../firebase/firestore/firestore'
+import { auth } from '../../firebase/firebase.config'
+import { getUser } from '../../firebase/firestore/firestore'
 interface ContextType {
   login: 'idle' | 'register/none' | 'register/done'
   userid: null | string

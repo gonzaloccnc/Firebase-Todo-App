@@ -1,24 +1,14 @@
-import React, { type ChangeEvent, useEffect, useState } from 'react'
+import React, { type ChangeEvent, useState, useContext } from 'react'
 import { TweetCard } from '../../components/tweets/TweetCard'
 import { type TweetFirebase, defaultLogo } from '../../utils/types'
-import { addTweet, getTwets } from '../../firebase/firestore/firestore'
 import { auth } from '../../firebase/firebase.config'
 import { Timestamp } from 'firebase/firestore'
 import { v4 } from 'uuid'
+import { tweetContext } from '../../context/tweets/TweetsContext'
 
 const Tweets: React.FC = () => {
-  const [tweetsList, setTweets] = useState<TweetFirebase[]>([])
+  const { tweets: tweetsList, dispatch } = useContext(tweetContext)
   const [comment, setComment] = useState<string>('')
-
-  const callTweets = async (): Promise<void> => {
-    const tdata: TweetFirebase[] = []
-    const list = await getTwets()
-    list.forEach(data => {
-      tdata.push({ ...data.data(), id: data.id })
-    })
-
-    setTweets(tdata)
-  }
 
   const handleChange = ({ target }: ChangeEvent<HTMLTextAreaElement>): void => {
     setComment(target.value)
@@ -34,14 +24,9 @@ const Tweets: React.FC = () => {
       domain: auth.currentUser?.email as string,
       logo: auth.currentUser?.photoURL ?? defaultLogo
     }
-
-    void addTweet(newTweet)
+    dispatch({ type: 'add/tweet', payload: newTweet })
     setComment('')
   }
-
-  useEffect(() => {
-    void callTweets()
-  }, [])
 
   return (
     <main className='w-full py-5 flex'>

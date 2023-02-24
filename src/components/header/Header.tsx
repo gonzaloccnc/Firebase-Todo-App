@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { IoMdPerson } from 'react-icons/io'
 import { handleSignOut } from '../../firebase/auth/auth'
-import { authContext } from '../../context/AuthContext'
+import { authContext } from '../../context/auth/AuthContext'
 
 const Header: React.FC = () => {
   const { setLogin } = useContext(authContext)
@@ -22,7 +22,6 @@ const Header: React.FC = () => {
       <nav className='flex gap-8'>
         <NavLink to='/todos'>Todos</NavLink>
         <NavLink to='/tweets'>Tweets</NavLink>
-        <NavLink to='/music'>Music</NavLink>
       </nav>
       <div>
         <div

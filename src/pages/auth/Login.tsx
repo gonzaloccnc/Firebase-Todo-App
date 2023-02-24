@@ -3,7 +3,7 @@ import { type UserCredential, signInWithEmailAndPassword } from 'firebase/auth'
 import { auth } from '../../firebase/firebase.config'
 import { useNavigate } from 'react-router-dom'
 import { handleRedirectGoogle } from '../../firebase/auth/auth'
-import { authContext } from '../../context/AuthContext'
+import { authContext } from '../../context/auth/AuthContext'
 import { AuthComponent } from '../../components/auth/AuthComponent'
 
 const Login: React.FC = () => {

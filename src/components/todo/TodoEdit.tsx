@@ -1,7 +1,7 @@
 import React, { type ChangeEvent, useState, useContext } from 'react'
 import { AiFillCloseCircle } from 'react-icons/ai'
-import { todoContext } from '../../context/TodoContext'
-import { authContext } from '../../context/AuthContext'
+import { todoContext } from '../../context/todo/TodoContext'
+import { authContext } from '../../context/auth/AuthContext'
 
 interface TodoEditProps {
   id: string
