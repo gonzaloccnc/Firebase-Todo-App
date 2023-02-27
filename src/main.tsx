@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './css/index.css'
 import { RouterProvider } from 'react-router-dom'
-import { router } from './routes/BrowserRouter'
-import { AuthProvider } from './context/auth/AuthContext'
-import { TodoProvider } from './context/todo/TodoContext'
-import { TweetProvider } from './context/tweets/TweetsContext'
+import { AuthProvider } from './app/components/providers/AuthProvider'
+import { router } from './app/routes/BrowserRouter'
+import { TodoProvider } from './app/components/providers/TodoProvider'
+import { TweetProvider } from './app/components/providers/TweetProvider'
+import './app/shared/css/index.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 

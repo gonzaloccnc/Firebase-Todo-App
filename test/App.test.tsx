@@ -1,8 +1,8 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import { AuthProvider } from '../src/context/AuthContext'
 import { RouterProvider } from 'react-router'
-import { router } from '../src/routes/BrowserRouter'
+import { AuthProvider } from '../src/app/components/providers/AuthProvider'
+import { router } from '../src/app/routes/BrowserRouter'
 
 describe('App init', () => {
   test('should return to login page if not registered', () => {

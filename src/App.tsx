@@ -1,7 +1,7 @@
 import React from 'react'
-import './firebase/firebase.config'
-import { Header } from './components/header/Header'
 import { Outlet } from 'react-router-dom'
+import { Header } from './app/components/header/Header'
+import './main/infra/firebase/firebase'
 
 const App: React.FC = () => {
   return (
