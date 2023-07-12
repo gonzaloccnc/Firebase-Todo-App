@@ -18,6 +18,4 @@ const AuthProtected: React.FC<AuthProtectedProps> = ({ children }) => {
   )
 }
 
-export {
-  AuthProtected
-}
+export default AuthProtected

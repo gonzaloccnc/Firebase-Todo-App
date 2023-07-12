@@ -1,7 +1,7 @@
 import React, { type ChangeEvent, useContext, useState } from 'react'
 import { v4 } from 'uuid'
 import { todoContext } from '../../shared/context/TodoContext'
-import { authContext } from '../providers/AuthProvider'
+import { authContext } from '../../shared/context/AuthContext'
 
 const initForm = {
   todo: '',

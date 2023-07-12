@@ -40,6 +40,4 @@ const TodoProvider: React.FC<TodoProviderProps> = ({ children }) => {
   )
 }
 
-export {
-  TodoProvider
-}
+export default TodoProvider

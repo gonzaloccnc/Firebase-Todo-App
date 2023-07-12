@@ -24,6 +24,4 @@ const RouteProtected: React.FC<HomeProtetedProps> = ({ children }) => {
   )
 }
 
-export {
-  RouteProtected
-}
+export default RouteProtected

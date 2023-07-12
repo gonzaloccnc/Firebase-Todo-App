@@ -36,3 +36,5 @@ Todas las operacios CRUD se pueden hacer cada usuario puede hacer sus propieas t
 * refactor los utils y nombres de exportaciones
 
 * ver la manera de optimizar y bloquear rutas
+
+# reactfire

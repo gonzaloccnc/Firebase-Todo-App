@@ -18,6 +18,4 @@ const CreateProtected: React.FC<CreateProtectedProps> = ({ children }) => {
   )
 }
 
-export {
-  CreateProtected
-}
+export default CreateProtected

@@ -31,6 +31,4 @@ const TweetProvider: React.FC<TweetProviderProps> = ({ children }) => {
   )
 }
 
-export {
-  TweetProvider
-}
+export default TweetProvider

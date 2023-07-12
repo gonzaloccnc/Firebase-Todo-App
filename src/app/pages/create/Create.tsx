@@ -75,6 +75,4 @@ const Create: React.FC = () => {
   )
 }
 
-export {
-  Create
-}
+export default Create

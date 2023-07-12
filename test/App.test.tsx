@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import { RouterProvider } from 'react-router'
-import { AuthProvider } from '../src/app/components/providers/AuthProvider'
+import AuthProvider from '../src/app/components/providers/AuthProvider'
 import { router } from '../src/app/routes/BrowserRouter'
 
 describe('App init', () => {

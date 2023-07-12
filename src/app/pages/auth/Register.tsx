@@ -29,6 +29,4 @@ const Register: React.FC = () => {
   )
 }
 
-export {
-  Register
-}
+export default Register

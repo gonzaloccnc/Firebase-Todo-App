@@ -6,6 +6,4 @@ const ErrorPage: React.FC = () => {
   )
 }
 
-export {
-  ErrorPage
-}
+export default ErrorPage

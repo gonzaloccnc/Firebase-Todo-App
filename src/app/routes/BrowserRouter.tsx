@@ -1,22 +1,25 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import { createBrowserRouter } from 'react-router-dom'
-import { Home } from '../pages/home/Home'
-import { Login } from '../pages/auth/Login'
-import { Register } from '../pages/auth/Register'
-import { ErrorPage } from '../pages/error/ErrorPage'
-import { Tweets } from '../pages/tweets/Tweets'
-import { RouteProtected } from './protected/ProtectedRoute'
-import { Todos } from '../pages/todos/Todos'
-import { Create } from '../pages/create/Create'
-import { AuthProtected } from './protected/AuthProtected'
-import { AuthLayout } from '../pages/auth/AuthLayout'
-import { CreateProtected } from './protected/CreateProtedted'
 import App from '../../App'
+
+const Home = lazy(async () => await import('../pages/home/Home'))
+const Login = lazy(async () => await import('../pages/auth/Login'))
+const Register = lazy(async () => await import('../pages/auth/Register'))
+const ErrorPage = lazy(async () => await import('../pages/error/ErrorPage'))
+const Tweets = lazy(async () => await import('../pages/tweets/Tweets'))
+const RouteProtected = lazy(async () => await import('./protected/ProtectedRoute'))
+const Todos = lazy(async () => await import('../pages/todos/Todos'))
+const Create = lazy(async () => await import('../pages/create/Create'))
+const AuthProtected = lazy(async () => await import('./protected/AuthProtected'))
+const AuthLayout = lazy(async () => await import('../pages/auth/AuthLayout'))
+const CreateProtected = lazy(async () => await import('./protected/CreateProtedted'))
+const TodoProvider = lazy(async () => await import('../components/providers/TodoProvider'))
+const TweetProvider = lazy(async () => await import('../components/providers/TweetProvider'))
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <RouteProtected><App /></RouteProtected>,
+    element: <Suspense fallback={<div>loading</div>}><RouteProtected><App /></RouteProtected></Suspense>,
     children: [
       {
         index: true,
@@ -24,17 +27,17 @@ const router = createBrowserRouter([
       },
       {
         path: 'todos',
-        element: <Todos />
+        element: <TodoProvider><Todos /></TodoProvider>
       },
       {
         path: 'tweets',
-        element: <Tweets />
+        element: <TweetProvider><Tweets /></TweetProvider>
       }
     ]
   },
   {
     path: '/auth',
-    element: <AuthProtected><AuthLayout /></AuthProtected>,
+    element: <Suspense fallback={<div>loading</div>}><AuthProtected><AuthLayout /></AuthProtected></Suspense>,
     children: [
       {
         index: true,
@@ -52,7 +55,7 @@ const router = createBrowserRouter([
   },
   {
     path: '*',
-    element: <ErrorPage />
+    element: <Suspense fallback={<div>loading</div>}><ErrorPage /></Suspense>
   }
 ])
 

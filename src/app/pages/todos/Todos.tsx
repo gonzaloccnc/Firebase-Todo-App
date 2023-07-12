@@ -14,6 +14,4 @@ const Todos: React.FC = () => {
   )
 }
 
-export {
-  Todos
-}
+export default Todos

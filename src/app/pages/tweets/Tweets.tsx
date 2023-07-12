@@ -67,6 +67,4 @@ const Tweets: React.FC = () => {
   )
 }
 
-export {
-  Tweets
-}
+export default Tweets
